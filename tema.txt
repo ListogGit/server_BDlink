@@ -635,3 +635,19 @@ app.get('/api/getclients', async(reg,res) => {
 http методы по разным моделям данных необходимо разнести по разным модулям
 создаем папку routes в которой создаем роутеры для каждой модели данных (clientRouter, ...)
 добавляем router.js которая будет главным маршрутизатором, он будет вызывать нужные функции при получении запроса с браузера
+
+
+функция create позволяет сделать запись в бд
+        const addClient = await Client.create({
+            name:'Reshetov',
+            rating:2,
+            age:20,
+            role:'user',
+            createdAt:'2025-09-05',
+            updated:'2025-09-05'})
+
+
+так можно выводить конкретные атрибуты
+        const getclients = await Client.findAll({
+            attributes: ['name','rating']
+        });
