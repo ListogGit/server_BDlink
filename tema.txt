@@ -651,3 +651,12 @@ http методы по разным моделям данных необходи
         const getclients = await Client.findAll({
             attributes: ['name','rating']
         });
+
+
+
+Шпаргалка по git
+        git config --global user.email "ваша.почта@example.com"
+        git config --global user.name "Ваше Имя"
+        git status
+        git add .
+        git push
