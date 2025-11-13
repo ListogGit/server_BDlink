@@ -6,7 +6,7 @@ export const getOrders = async(req, res) => {
         const data = await Orders.findAll();
         res.status(200).json(data)
     }
-    catch(error){
-        res.status(500).json({message: "ошибка сервера при получении данных"})
+    catch(err){
+        next(err)
     }
 }

@@ -3,12 +3,15 @@ import express from 'express';
 import sequelize from './db.js';
 import router from './routes/router.js';
 import cors from 'cors'
+import errorHandler from './middleware/errorHandler.js'
 
-const app = express();
-app.use(cors());
 const PORT = process.env.PORT;
-app.use('/api', router)
+const app = express();
 
+app.use(cors());
+app.use('/api', router)
+app.use(errorHandler)
+app.use(express.json())
 
 const start = async () => {
     try {
