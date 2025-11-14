@@ -1,0 +1,11 @@
+.btn{
+    height: 20px;
+    width: 100px;
+    background-color: cornflowerblue;
+}
+.link{
+    text-decoration: none;
+}
+.link_active{
+    text-transform: underline;
+}
